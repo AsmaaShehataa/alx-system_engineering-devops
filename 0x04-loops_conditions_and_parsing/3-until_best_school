@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-#Write a Bash script that displays Best School 10 times.
-
-index=10
-
-until [ $index -lt 1 ];
+# until loop example to print 10x best school
+c=0
+max=10
+until [ "$c" -eq "$max" ]
 do
-    echo "Best School"
-    let index-=1
+	echo "Best School"
+	(( c++ ))
 done

@@ -6,7 +6,6 @@ clock_hours=0
 while((clock_hours <= 12));
 do
 echo $"clock_hours:" $clock_hours
-
 m_mintues=1
 while ((m_mintues <= 59));
 do

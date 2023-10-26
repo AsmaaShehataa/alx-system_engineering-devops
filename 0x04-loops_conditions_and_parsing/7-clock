@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-#Bash script that displays the time for 12 hours and 59 minutes
+#Bash script that displays the time for 12 c_hours and 59 minutes
 
-clock_hours=0
+c_hours=0
 
-while((clock_hours <= 12));
+while((c_hours <= 12));
 do
-echo $"clock_hours:" $clock_hours
-m_mintues=1
-while ((m_mintues <= 59));
-do
-echo $m_mintues
-((m_mintues++))
-done
-((clock_hours++))
+    echo $"Hour:" $c_hours
+    minutes=1
+    while ((minutes <= 59));
+    do
+	echo $minutes
+	((minutes++))
+    done
+    ((c_hours++))
 done

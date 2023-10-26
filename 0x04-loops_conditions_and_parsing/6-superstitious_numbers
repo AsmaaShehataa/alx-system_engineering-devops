@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#Write a Bash script that displays numbers from 1 to 20
+
+m_counter=1
+
+while [ $m_counter -le 20 ]
+do
+  case $m_counter in
+    4)
+      echo "4"
+      echo "bad luck from China"
+      ;;
+    9)
+      echo "9"
+      echo "bad luck from Japan"
+      ;;
+    17)
+      echo "17"
+      echo "bad luck from Italy"
+      ;;
+    *)
+      echo $m_counter
+      ;;
+  esac
+
+  m_counter=$((m_counter+1))
+done

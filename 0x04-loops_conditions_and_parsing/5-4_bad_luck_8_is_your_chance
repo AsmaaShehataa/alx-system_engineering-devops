@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# while loop and if conditions
+
+index=1
+
+while((index <= 10));
+do
+if ((index==4));
+then
+echo "bad luck"
+elif ((index==8));
+then
+echo "good luck"
+else
+echo "Best School"
+fi
+((index++))
+done

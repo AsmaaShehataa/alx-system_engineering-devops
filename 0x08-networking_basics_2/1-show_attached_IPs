@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# shwoing all active IPs 
+
+op -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}'

@@ -1,7 +1,13 @@
-#!/usr/bin/env bash
+# SSH File Configration
 
-# Client configuration file
+Host 3.84.158.215
+	PasswordAuthentication no
+	IdentityFile ~/.ssh/school
 
+
+root@f8c50a5269e8:/alx-system_engineering-devops/0x0B-ssh# vi 2-ssh_config 
+root@f8c50a5269e8:/alx-system_engineering-devops/0x0B-ssh# rm 2-ssh_config 
+root@f8c50a5269e8:/alx-system_engineering-devops/0x0B-ssh# vi 2-ssh_config
 root@f8c50a5269e8:/alx-system_engineering-devops/0x0B-ssh# ssh -v ubuntu@3.84.158.215
 OpenSSH_8.2p1 Ubuntu-4ubuntu0.9, OpenSSL 1.1.1f  31 Mar 2020
 debug1: Reading configuration data /etc/ssh/ssh_config
@@ -42,13 +48,13 @@ debug1: SSH2_MSG_NEWKEYS sent
 debug1: expecting SSH2_MSG_NEWKEYS
 debug1: SSH2_MSG_NEWKEYS received
 debug1: rekey in after 134217728 blocks
-debug1: Will attempt key: /root/.ssh/id_rsa
-debug1: Will attempt key: /root/.ssh/id_dsa
-debug1: Will attempt key: /root/.ssh/id_ecdsa
-debug1: Will attempt key: /root/.ssh/id_ecdsa_sk
-debug1: Will attempt key: /root/.ssh/id_ed25519
-debug1: Will attempt key: /root/.ssh/id_ed25519_sk
-debug1: Will attempt key: /root/.ssh/id_xmss
+debug1: Will attempt key: /root/.ssh/id_rsa 
+debug1: Will attempt key: /root/.ssh/id_dsa 
+debug1: Will attempt key: /root/.ssh/id_ecdsa 
+debug1: Will attempt key: /root/.ssh/id_ecdsa_sk 
+debug1: Will attempt key: /root/.ssh/id_ed25519 
+debug1: Will attempt key: /root/.ssh/id_ed25519_sk 
+debug1: Will attempt key: /root/.ssh/id_xmss 
 debug1: SSH2_MSG_EXT_INFO received
 debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com>
 debug1: SSH2_MSG_SERVICE_ACCEPT received
@@ -63,4 +69,4 @@ debug1: Trying private key: /root/.ssh/id_ed25519_sk
 debug1: Trying private key: /root/.ssh/id_xmss
 debug1: No more authentication methods to try.
 ubuntu@3.84.158.215: Permission denied (publickey).
-root@f8c50a5269e8:/alx-system_engineering-devops/0x0B-ssh#
+root@f8c50a5269e8:/alx-system_engineering-devops/0x0B-ssh#       

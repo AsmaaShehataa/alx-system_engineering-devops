@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Apache server container correction
+
+service apache2 start

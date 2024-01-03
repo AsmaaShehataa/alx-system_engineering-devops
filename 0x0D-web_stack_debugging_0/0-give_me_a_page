@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# check the status of apache server
+# check the status of apache servers
 
 sudo service apache2 status
 sudo service apache2 start

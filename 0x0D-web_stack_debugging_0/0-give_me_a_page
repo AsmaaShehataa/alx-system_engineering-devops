@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Apache server container correction
+# check the status of apache server
 
-service apache2 start
+sudo service apache2 status
+sudo service apache2 start

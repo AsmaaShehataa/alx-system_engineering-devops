@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-#Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02)
+#Configure Nginx server so that its HTTP response contains a custom header (on web-01 and web-02)
 
 sudo apt-get update
-sudo apt-get -y install nginx
+sudo apt-get install nginx -y
 echo "Hello World!" | sudo tee /var/www/html/index.html
-sudo sed -i '/server_name _;/a \location /redirect_me {\n return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}' /etc/nginx/sites-available/default
-sudo sed -i '/^\slocation.*/i \        add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
-sudo sed -i '/^\slocation.*/i \        error_page 404 /custom_404.html;' /etc/nginx/sites-available/default
+sudo sed -i '/server_name _;/a \	location /redirect_me {\n		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n	}' /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+sudo sed -i '/server_name _;/a \        error_page 404 /custom_404.html;\n        location = /custom_404.html {\n                internal;\n        }' /etc/nginx/sites-available/default
+HOSTNAME=$(hostname)
+sudo sed -i "/^http {/a \    add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
 sudo service nginx restart

@@ -1,7 +1,21 @@
-sudo ufw status verbose
+echo -e "Updating\n"
+sudo apt update
+
+echo -e "Installing ufw\n"
+which ufw
+#/usr/bin/ufw
+sudo apt-get install -y ufw
+
+#allow incoming and deny outcoming
+sudo ufw default deny outgoing
 sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow 22/tcp
-sudo ufw allow 443/tcp
-sudo ufw allow 80/tcp
+
+#allow ports
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 443
+
+#enable ufw
 sudo ufw enable
+
+echo -e "Process Completed.\n"

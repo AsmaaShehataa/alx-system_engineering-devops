@@ -3,7 +3,8 @@ sudo apt update
 
 echo -e "Installing ufw\n"
 which ufw
-/usr/bin/ufw
+#/usr/bin/ufw
+install ufw
 
 #allow incoming and deny outcoming
 sudo ufw default deny outgoing

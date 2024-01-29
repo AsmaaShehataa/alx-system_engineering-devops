@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""CSV file parser for the 'data.csv' file."""
+"""CSV file parser for the 'csv' file."""
 
 if __name__ == '__main__':
     import csv

@@ -13,8 +13,9 @@ if __name__ == '__main__':
 
     for user in users:
         USER_ID = user["id"]
-        req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
-                           format(USER_ID))
+        req = requests.get(
+          f'https://jsonplaceholder.typicode.com/todos?userId={USER_ID}'
+          ).json()
         todos = req.json()
 
         tasks = []

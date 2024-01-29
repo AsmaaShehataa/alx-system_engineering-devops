@@ -1,35 +1,29 @@
+
 #!/usr/bin/python3
-"""Given Employee information, return their todo list progress."""
+"""Python script that, using this REST API, for a given employee ID,"""
 
-if __name__ == "__main__":
-    import requests  # imports section
-    import sys
-    import urllib3
-    urllib3.disable_warnings(urllib3.exceptions.NotOpenSSLWarning)
+import re
+import requests
+import sys
 
-    NUMBER_OF_DONE_TASKS = 0
-    TASK_TITLE = []
-    USER_ID = sys.argv[1]
+REST_API = "https://jsonplaceholder.typicode.com"
 
-    _request = requests.get(
-        f'https://jsonplaceholder.typicode.com/todos?userId={USER_ID}'
-    ).json()
-
-    USERNAME = _request.get("username")
-
-    _request = requests.get(
-        f'https://jsonplaceholder.typicode.com/todos?userId={USER_ID}'
-    ).json()
-
-    for _task in _request:
-        if _task.get('completed') is True:
-            TASK_TITLE.append(_task.get('title'))
-            NUMBER_OF_DONE_TASKS += 1
-
-    TOTAL_NUMBER_OF_TASKS = len(_request)
-
-    print('Employee {} is done with tasks({}/{}):'.
-          format(USERNAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
-
-    for title in TASK_TITLE:
-        print('\t {}'.format(title))
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        if re.fullmatch(r'\d+', sys.argv[1]):
+            id = int(sys.argv[1])
+            req = requests.get('{}/users/{}'.format(REST_API, id)).json()
+            task_req = requests.get('{}/todos'.format(REST_API)).json()
+            emp_name = req.get('name')
+            tasks = list(filter(lambda x: x.get('userId') == id, task_req))
+            completed_tasks = list(filter(lambda x: x.get('completed'), tasks))
+            print(
+                'Employee {} is done with tasks({}/{}):'.format(
+                    emp_name,
+                    len(completed_tasks),
+                    len(tasks)
+                )
+            )
+            if len(completed_tasks) > 0:
+                for task in completed_tasks:
+                    print('\t {}'.format(task.get('title')))

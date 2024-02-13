@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ retrieve titles of hot posts """
 
-import requests
 
 
 def top_ten(subreddit):
     """ function to retrieve post titles 10 in number """
+    import requests
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {"User-agent": "nadduli daniel"}
 

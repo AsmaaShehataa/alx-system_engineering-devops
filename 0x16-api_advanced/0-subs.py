@@ -18,4 +18,4 @@ def number_of_subscribers(subreddit):
     page_list = data['children']
     page_data = page_list[0]['data']
 
-    return response.json().get('data').get('subscribers')
+    return page_data['subreddit_subscribers']

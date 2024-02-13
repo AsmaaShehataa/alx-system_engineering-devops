@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" retrieve titles of posts """
+""" retrieve titles of hot posts """
 
 import requests
 

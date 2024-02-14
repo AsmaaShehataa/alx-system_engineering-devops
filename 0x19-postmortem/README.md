@@ -1,4 +1,5 @@
-![error-404-db-meme](http://url/to/error-404-db-meme)
+
+![image](https://github.com/AsmaaShehataa/alx-system_engineering-devops/assets/72894781/a5904569-4213-491f-a29d-c09c811b9bab)
 
 
 Database Outage - Airbnb_v4_Webdynamic date/time 12 -02- 2024 to 13- 02- 2024 15:00 pm GMT - Back to work  13 -02- 2024 17:00 pm GMT

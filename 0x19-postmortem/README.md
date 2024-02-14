@@ -10,5 +10,5 @@ Action taken - investigation/debugging paths that were taken:-
 first I open mysql DB and connect to the root user 
 mysql -u root -p 
 I found this error 
-![Screenshot](Screenshot.png)
+![Screenshot](/images/Screenshot%20.png)
 

@@ -1,7 +1,7 @@
 0x1A-application_server
 
 Task 0 
-ubuntu@431760-web-01:~$ git clone https://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@github.com/AsmaaShehataa/AirBnB_clone_v2.git
+
 Cloning into 'AirBnB_clone_v2'...
 remote: Enumerating objects: 667, done.
 remote: Total 667 (delta 0), reused 0 (delta 0), pack-reused 667
@@ -129,20 +129,3 @@ agent   345640 dd-agent    9u  IPv4 2888337      0t0  TCP localhost:5000 (LISTEN
  * Serving Flask app '0-hello_route'
  * Debug mode: off
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://10.247.222.190:5000
-Press CTRL+C to quit
-
-2nd window 
-
-
-Last login: Wed Feb 21 12:48:39 2024 from 154.180.126.30
-ubuntu@431760-web-01:~$ ls
-0-iamsomeoneelse       AirBnB_clone_v2  alx-system_engineering-devops  mysql-apt-config_0.8.12-1_all.deb  tyrell_corp.sql
-0-setup_web_static.sh  airbnb2          ddagent-install.log            temp_mysql_v
-ubuntu@431760-web-01:~$ cd AirBnB_clone_v2/
-ubuntu@431760-web-01:~/AirBnB_clone_v2$ curl 127.0.0.1:5000/airbnb-onepage/
-Hello HBNB!ubuntu@431760-web-01:~/AirBnB_clone_v2$ 
-
-
